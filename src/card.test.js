@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Card from './card';
+import Card from './Card';
 
 describe('Cards', () => {
 
