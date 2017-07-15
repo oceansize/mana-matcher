@@ -6,7 +6,6 @@ class Card extends Component {
 
   getCards (card) {
     let selectedCard = cardData[card];
-    console.log(selectedCard);
     return selectedCard.name;
   };
 
