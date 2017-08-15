@@ -11,8 +11,7 @@ describe('Search', () => {
   });
 
   it('accepts text in an input', () => {
-    const input = wrapper.find('input');
-    input.simulate('keyPress', { key: 'a', keyCode: 65 });
+    wrapper.find('input').simulate('change', { target: { value: 'a' } });
+    expect(wrapper.find('input').props().value).toEqual('a');
   });
 });
-
