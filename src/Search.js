@@ -7,7 +7,7 @@ class Search extends Component {
     this.state = {
       searchText: "Type card name in here"
     };
-    // this.inputUpdate = this.inputUpdate.bind(this);
+    this.inputUpdate = this.inputUpdate.bind(this);
   }
 
   inputUpdate (event) {
@@ -21,7 +21,7 @@ class Search extends Component {
         <input type="text"
                className="card-search"
                placeholder="starting text"
-               onChange={ this.inputUpdate.bind(this) }
+               onChange={ this.inputUpdate }
                value={ this.state.searchText } />
       </form>
     );

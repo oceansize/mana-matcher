@@ -3,7 +3,6 @@ import cardData from '../json/AllCards-x.json';
 
 class Card extends Component {
 
-
   getCards (card) {
     let selectedCard = cardData[card];
     return selectedCard.name;
