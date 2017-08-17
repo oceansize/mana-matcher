@@ -23,4 +23,9 @@ describe('Cards', () => {
     let wrapper = shallow(<Card cardName="Lightning Bolt" />);
     expect(wrapper.text()).toContain('{R}');
   });
+
+  it('has at least one colour', () => {
+    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    expect(wrapper.text()).toContain('Red');
+  });
 });
