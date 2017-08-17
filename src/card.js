@@ -13,8 +13,10 @@ class Card extends Component {
     const card = this.getCard();
     return(
       <div className="Card">
-        Card name: { card.name }
-        Card text: { card.text }
+        <ul>
+          <li>Card name: { card.name }</li>
+          <li>Card text: { card.text }</li>
+        </ul>
       </div>
     );
   };
