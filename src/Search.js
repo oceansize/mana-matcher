@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Card from './Card';
 
 class Search extends Component {
-  //what is constructor?
+
   constructor(props) {
     super(props);
     this.state = {
-      searchText: "Type card name in here"
+      searchText: "Lightning Bolt"
     };
     this.inputUpdate = this.inputUpdate.bind(this);
   }
@@ -16,14 +17,18 @@ class Search extends Component {
   }
 
   render() {
+    let searchText = this.state.searchText;
     return(
-      <form>
-        <input type="text"
-               className="card-search"
-               placeholder="starting text"
-               onChange={ this.inputUpdate }
-               value={ this.state.searchText } />
-      </form>
+      <div>
+        <fieldset>
+          <input type="text"
+                 className="card-search"
+                 placeholder="starting text"
+                 onChange={ this.inputUpdate }
+                 value={ searchText } />
+        </fieldset>
+        <Card cardName={ searchText }/>
+      </div>
     );
   };
 };
