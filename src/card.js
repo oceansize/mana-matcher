@@ -3,15 +3,17 @@ import cardData from '../json/AllCards-x.json';
 
 class Card extends Component {
 
-  getCards (card) {
+  getCard (card) {
     let selectedCard = cardData[card];
-    return selectedCard.name;
+    return selectedCard;
   };
 
   render() {
+    const cardName = this.props.cardName;
     return(
       <div className="Card">
-        { this.getCards('Lightning Bolt') }
+        Card name: { this.getCard(cardName).name }
+        Card text: { this.getCard(cardName).text }
       </div>
     );
   };
