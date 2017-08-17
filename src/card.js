@@ -16,6 +16,7 @@ class Card extends Component {
         <ul>
           <li>Card name: { card.name }</li>
           <li>Card text: { card.text }</li>
+          <li>Card CMC:  { card.manaCost }</li>
         </ul>
       </div>
     );

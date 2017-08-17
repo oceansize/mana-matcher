@@ -18,4 +18,9 @@ describe('Cards', () => {
     let wrapper = shallow(<Card cardName="Lightning Bolt" />);
     expect(wrapper.text()).toContain('deals 3 damage');
   });
+
+  it('has a mana cost', () => {
+    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    expect(wrapper.text()).toContain('{R}');
+  });
 });
