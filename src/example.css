@@ -1,0 +1,146 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper, .card {
+  width: 320px;
+  height: 500px;
+}
+
+.card-border {
+  border: solid black 15px;
+  border-radius: 40px;
+}
+
+.card {
+  width:100%;
+  position: relative;
+  border-radius: 14px;
+
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+  /* Safari and Chrome */
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+  /* W3C */
+  display:box;
+  box-pack:center;
+  box-align:center;
+  background: rgba(24,80,48,1);
+}
+
+.name-area, .card-type-area {
+  left: 5px;
+}
+
+.name-area, .card-type-area, .power-and-toughness {
+  border-radius: 9px / 16px;
+  z-index: 999;
+  width: 280px;
+  padding: 2px 12px;
+  position: absolute;
+  background: rgba(200,199,199, 1);
+  border: solid rgba(10,10,10, 1) 3px;
+}
+
+.name-area, .card-type-area {
+  left: 5px;
+  width: 280px;
+}
+
+.name-area {
+  top: 6px;
+}
+
+.mana-cost, .set-indicator {
+  float: right;
+}
+
+.card-type-area {
+  top: 245px;
+}
+
+.power-and-toughness {
+  width: 55px;
+  text-align: center;
+  bottom: 18px;
+  right: 6px;
+  letter-spacing: 3px;
+  border-radius: 10px / 16px;
+  border: solid rgba(10,10,10, 1) 2px;
+}
+
+h3, h4 {
+  padding: 0;
+  maring: 0;
+  display: inline;
+}
+
+.artwork {
+  position: absolute;
+  border-radius: 6px;
+  background: url(https://i.pinimg.com/originals/fd/22/ef/fd22efbd5219f5c1d091381f212571ad.jpg) no-repeat;
+  width: 260px;
+  height: 245px;
+  top: 12px;
+  left: 16px;
+  border: solid black 3px;
+  background-size: cover;
+}
+
+.text-box{
+  position: absolute;
+  bottom: 38px;
+  left: 16px;
+  width: 260px;
+  height: 170px;
+  background: rgba(255,255,255, 0.75);
+  border: solid white 2px;
+  padding: 1em;
+}
+
+.meta-info {
+  color: rgba(255,255,255, 0.8);
+  font-size: x-small;
+  letter-spacing: .5px;
+  font-style: italic;
+  position: absolute;
+  bottom: 7px;
+  left: 18px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.flavour-text {
+  font-style: italic;
+}
+
+.artist-credit:before {
+  content: "Artist: ";
+}
+
+.card-number:before {
+  content: "Card Number: ";
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.shadow {
+  -moz-box-shadow:    inset 0 0 15px rgba(0,0,0, 0.15);
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0, 0.15);
+  box-shadow:         inset 0 0 15px rgba(0,0,0, 0.15);
+}
