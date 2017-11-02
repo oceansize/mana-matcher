@@ -28,4 +28,10 @@ describe('Cards', () => {
     let wrapper = shallow(<Card cardName="Lightning Bolt" />);
     expect(wrapper.text()).toContain('Red');
   });
+
+  it('throws an error if it cannot find the card', () => {
+    expect(() => {
+      shallow(<Card cardName="Lightn" />);
+    }).toThrow();
+  });
 });

@@ -13,7 +13,8 @@ class Search extends Component {
 
   inputUpdate (event) {
     this.setState({ searchText: event.target.value});
-    console.log(this.state.searchText)
+    console.log(this.state.searchText);
+    console.log(React.version);
   }
 
   render() {

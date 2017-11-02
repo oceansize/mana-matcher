@@ -14,4 +14,5 @@ describe('Search', () => {
     wrapper.find('input').simulate('change', { target: { value: 'a' } });
     expect(wrapper.find('input').props().value).toEqual('a');
   });
+
 });
