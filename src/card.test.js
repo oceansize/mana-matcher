@@ -29,9 +29,9 @@ describe('Cards', () => {
     expect(wrapper.text()).toContain('Red');
   });
 
-  it('throws an error if it cannot find the card', () => {
+  it('does not throw an error if card is missing', () => {
     expect(() => {
       shallow(<Card cardName="Lightn" />);
-    }).toThrow();
+    }).not.toThrow();
   });
 });
