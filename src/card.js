@@ -6,10 +6,17 @@ class Card extends Component {
   getCard () {
     let card = this.props.cardName;
     let selectedCard = cardData[card];
+    if (selectedCard === undefined) {
+      selectedCard = { name: "-",
+                       text: "-",
+                       manaCost: "-",
+                       colors: "-"}
+    }
     return selectedCard;
   };
 
   render() {
+    console.log("LOGGING SUCCESS");
     const card = this.getCard();
     return(
       <div className="Card">
