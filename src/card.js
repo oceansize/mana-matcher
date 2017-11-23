@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 import cardData from './json/AllCards-x.json';
+import BlankCard from './BlankCard';
+
 
 class Card extends Component {
 
   getCard () {
     let card = this.props.cardName;
     let selectedCard = cardData[card];
-    if (selectedCard === undefined) {
-      selectedCard = { name: "-",
-                       text: "-",
-                       manaCost: "-",
-                       colors: "-"}
-    }
     return selectedCard;
   };
 
   render() {
-    console.log("LOGGING SUCCESS");
     const card = this.getCard();
-    return(
-      <div className="Card">
+    if (card === undefined) {
+      return(
+        <BlankCard />
+      );
+    } else {
+      return(
+        <div className="Card">
         <ul>
-          <li>Card name:   { card.name     }</li>
-          <li>Card text:   { card.text     }</li>
-          <li>Card CMC:    { card.manaCost }</li>
-          <li>Card Colour: { card.colors   }</li>
+        <li>Card name:   { card.name     }</li>
+        <li>Card text:   { card.text     }</li>
+        <li>Card CMC:    { card.manaCost }</li>
+        <li>Card Colour: { card.colors   }</li>
         </ul>
-      </div>
-    );
+        </div>
+      );
+    };
   };
 };
 
