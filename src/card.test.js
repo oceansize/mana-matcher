@@ -4,34 +4,35 @@ import Card from './Card';
 
 describe('Cards', () => {
 
+  let lightningBoltMock = { name: "Lightning Bolt",
+                            text: "deals 3 damage",
+                            manaCost: "{R}",
+                            colors: "Red" }
+
+  let bitterBlossomMock = { name: "Bitterblossom" }
+
   it('has a name', () => {
-    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    let wrapper = shallow(<Card cardName={ lightningBoltMock } />);
     expect(wrapper.text()).toContain('Lightning Bolt');
   });
 
   it('has a different name', () => {
-    let newWrapper = shallow(<Card cardName="Bitterblossom" />);
-    expect(newWrapper.text()).toContain('Bitterblossom');
+    let wrapper = shallow(<Card cardName={ bitterBlossomMock } />);
+    expect(wrapper.text()).toContain('Bitterblossom');
   });
 
   it('has instructional text', () => {
-    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    let wrapper = shallow(<Card cardName={ lightningBoltMock } />);
     expect(wrapper.text()).toContain('deals 3 damage');
   });
 
   it('has a mana cost', () => {
-    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    let wrapper = shallow(<Card cardName={ lightningBoltMock } />);
     expect(wrapper.text()).toContain('{R}');
   });
 
   it('has at least one colour', () => {
-    let wrapper = shallow(<Card cardName="Lightning Bolt" />);
+    let wrapper = shallow(<Card cardName={ lightningBoltMock } />);
     expect(wrapper.text()).toContain('Red');
-  });
-
-  it('does not throw an error if card is missing', () => {
-    expect(() => {
-      shallow(<Card cardName="Lightn" />);
-    }).not.toThrow();
   });
 });

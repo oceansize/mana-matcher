@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import CardLocator from './CardLocator';
 
 class Search extends Component {
 
@@ -13,7 +13,6 @@ class Search extends Component {
 
   inputUpdate (event) {
     this.setState({ searchText: event.target.value});
-    console.log(this.state.searchText)
   }
 
   render() {
@@ -27,7 +26,7 @@ class Search extends Component {
                  onChange={ this.inputUpdate }
                  value={ searchText } />
         </fieldset>
-        <Card cardName={ searchText }/>
+        <CardLocator findCard={ searchText }/>
       </div>
     );
   };
