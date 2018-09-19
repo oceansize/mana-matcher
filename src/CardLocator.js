@@ -14,9 +14,9 @@ class CardLocator extends Component {
   render() {
     // const card = this.getCard();
     const card = { name: "Lightning Bolt",
-                              text: "deals 3 damage",
-                              manaCost: "{R}",
-                              colors: "Red" }
+                   text: "deals 3 damage",
+                   manaCost: "{R}",
+                   colors: "Red" }
 
     if (card === undefined) {
       return(
